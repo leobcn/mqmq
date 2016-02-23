@@ -1,6 +1,8 @@
 MQMQ
 ====
 
+[![GoDoc](https://godoc.org/github.com/disintegration/mqmq?status.svg)](https://godoc.org/github.com/disintegration/mqmq)
+
 A very simple message queue client/server library and command-line tool written in Go.
 
 Installation
