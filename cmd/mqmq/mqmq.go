@@ -33,6 +33,7 @@ func main() {
 }
 
 func processStart(addr string) {
+	log.Printf("INFO: starting server: %s", addr)
 	server := mqmq.NewServer()
 
 	go func() {
@@ -48,6 +49,7 @@ func processStart(addr string) {
 	log.Printf("INFO: received signal: %v", s)
 
 	server.Stop()
+	log.Printf("INFO: server stopped: %s", addr)
 }
 
 func processInfo(addr string) {

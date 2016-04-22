@@ -92,8 +92,6 @@ func (s *Server) Serve(l net.Listener) error {
 	s.queues = make(map[string]queue)
 	s.connections = make(map[*connection]struct{})
 
-	s.logf("INFO: server started: %s", s.listener.Addr())
-
 	for {
 		conn, err := s.listener.Accept()
 		s.mu.Lock()
@@ -156,7 +154,6 @@ func (s *Server) Stop() error {
 		}
 	}
 
-	s.logf("INFO: server stopped")
 	return nil
 }
 
